@@ -1,0 +1,23 @@
+debug:
+
+server:
+  port: 9998
+
+security:
+  ignored: /,/favicon.ico,/error
+
+oauth2:
+  client:
+    tokenUri: http://localhost:8080/uaa/oauth/token
+    authorizationUri: http://localhost:8080/uaa/oauth/authorize
+    clientId: acme2
+    clientSecret: acmesecret2
+  resource:
+    jwt:
+      keyUri: http://localhost:8080/uaa/oauth/token_key
+    id: sso2
+    serviceId: sso2
+
+logging:
+  level:
+    org.springframework.security: DEBUG
